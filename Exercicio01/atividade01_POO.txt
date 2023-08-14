@@ -29,3 +29,5 @@ e a classe NaveJogador com os atributos nivel e impulsoVelocidade, os métodos d
 CaixaVida, CaixaMunicao, Inimigo.
 
 !!! CÓDIGOS NA PASTA *CLASSES* !!!
+
+LINK DIAGRAMAS CLASSES UML: https://drive.google.com/file/d/1Qw9YbA1_yxuCKx5H93C8NRumZxykq8R-/view?usp=sharing
