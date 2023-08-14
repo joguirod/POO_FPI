@@ -1,0 +1,27 @@
+RESPOSTAS EXERCÍCIO 01:
+
+01. As classes são como modelos e os objetos são as aplicações desses modelos, já que um objeto é uma instanciação de uma classe. Um objeto chamado José é uma instanciação da classe Pessoa, com atributos e métodos definidos na classe.
+
+02. Os atributos são como características/propriedades de uma classe e os métodos são comportamentos/ações da classe. Utiliza-se muito como exemplo a classe Carro, que possui atributos como modelo, placa, anoLancamento e métodos como buzinar, acelerar e frear.
+
+03. 
+	Peso --- Sistema de acompanhamento de emagrecimento
+	Tipo de CNH --- Sistema de uma unidade do DETRAN
+	Tipo Sanguíneo --- Sistema de um hospital
+	Habilidade destra --- Sistema de escola de futebol
+	Percentual de gordura --- Sistema de uma clínica de nutrição
+	Saldo em conta --- Sistema de um banco
+	Etinia --- Sistema de uma instituição de pesquisa como o IBGE.
+04. 
+	a) Sim, dessa forma uma pessoa poderia estar vínculada a outras partes do banco ou outras contas.
+	b) Sim, dessa forma seria mais fácil de verificar/encontrar todas as contas de uma pessoa. O elemento da programação que permitiria seria uma coleção, neste sentido um array ou uma lista.
+
+05. •	Professor
+    •	Coordenador
+    •	Disciplina
+    •	Departamento
+    •	Turma
+
+06.•	Imaginando um jogo onde o protagonista é uma nave no espaço que enfrenta obstáculos como inimigos e asteróides, existiria a classe ObjetoVoador com os atributos velocidade e escudo e metódos moverX() e moverY(), sendo base para as naves tanto inimiga quanto a protagonista, ObjetoColetavél com os atributos qtdVida e qtdMunicao e método quebrar(), Nave com o atributo dano e método atirar() (classe derivada de ObjetoVoador), também existiria a classe NaveInimiga com os atributos agressividade e experiencia e método atacar() (deriva de Nave) e a classe NaveJogador com os atributos nivel e impulsoVelocidade, os métodos dessa classe seriam ativarImpulso() e subirNivel() (deriva de Nave). A partir dai, criariamos os objetos Jogador, CaixaVida, CaixaMunicao, Inimigo.
+
+!!! CÓDIGOS NA PASTA *CLASSES* !!!
