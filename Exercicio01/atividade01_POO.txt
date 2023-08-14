@@ -22,6 +22,10 @@ RESPOSTAS EXERCÍCIO 01:
     •	Departamento
     •	Turma
 
-06.•	Imaginando um jogo onde o protagonista é uma nave no espaço que enfrenta obstáculos como inimigos e asteróides, existiria a classe ObjetoVoador com os atributos velocidade e escudo e metódos moverX() e moverY(), sendo base para as naves tanto inimiga quanto a protagonista, ObjetoColetavél com os atributos qtdVida e qtdMunicao e método quebrar(), Nave com o atributo dano e método atirar() (classe derivada de ObjetoVoador), também existiria a classe NaveInimiga com os atributos agressividade e experiencia e método atacar() (deriva de Nave) e a classe NaveJogador com os atributos nivel e impulsoVelocidade, os métodos dessa classe seriam ativarImpulso() e subirNivel() (deriva de Nave). A partir dai, criariamos os objetos Jogador, CaixaVida, CaixaMunicao, Inimigo.
+06.	Imaginando um jogo onde o protagonista é uma nave no espaço que enfrenta obstáculos como inimigos e asteróides, existiria a classe ObjetoVoador com os atributos velocidade e
+escudo e metódos moverX() e moverY(), sendo base para as naves tanto inimiga quanto a protagonista, ObjetoColetavél com os atributos qtdVida e qtdMunicao e método quebrar(), Nave com
+o atributo dano e método atirar() (classe derivada de ObjetoVoador), também existiria a classe NaveInimiga com os atributos agressividade e experiencia e método atacar() (deriva de Nave)
+e a classe NaveJogador com os atributos nivel e impulsoVelocidade, os métodos dessa classe seriam ativarImpulso() e subirNivel() (deriva de Nave). A partir dai, criariamos os objetos Jogador,
+CaixaVida, CaixaMunicao, Inimigo.
 
 !!! CÓDIGOS NA PASTA *CLASSES* !!!
