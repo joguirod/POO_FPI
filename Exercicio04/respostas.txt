@@ -1,0 +1,31 @@
+1. (F)
+   (V)
+   (F)
+   (V)
+   (V)
+   (V)
+   (V)
+
+2. É afirmavél que haverá um problema de compilação, visto que TypeScript exige que as variavéis sejam inicializadas.
+
+3. class Hotel {
+    quantReservas: number = 0;
+    
+    constructor(quantReservas: number) {
+        this.quantReservas = quantReservas;
+    }
+
+    adicionarReservas() : void {
+        quantReservas++;
+    }
+}
+
+4. Ocorreriam dois erros de compilação, o atributo volume não foi inicializado e na instanciação da classe Radio, não foi
+ passado o parâmetro do construtor idealizado (volune). A solução seria inicializar o atributo volume e passar como argumento
+ o número 10 para o construtor.
+   
+
+5.
+
+
+6. Código na pasta ./classes/Saudacao
