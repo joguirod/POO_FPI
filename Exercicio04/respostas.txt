@@ -25,7 +25,11 @@
  o número 10 para o construtor.
    
 
-5.
+5. Os prints imprimirão todos 190. Isso acontecerá porque c1 e c3 estarão todos apontando para o objeto c2, 
+então quando c1.sacar(10) for realizado,  será sacado 10 reais de c2. como os objetos estão apontando pra c2,
+todos "terão" 190 de saldo.
 
 
-6. Código na pasta ./classes/Saudacao
+6, 7, 8, 9, 10. Códigos na pasta ./classes
+
+11. Acredito que a melhor seria a que retorna erro ou acerto.
