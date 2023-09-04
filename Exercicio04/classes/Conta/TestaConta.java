@@ -17,7 +17,6 @@ public class TestaConta {
         while (opcao != 0);
         
         scanner.close();
-        System.out.println("Até mais!");
     }
 
     public static String showOpcoes(){
@@ -35,6 +34,9 @@ public class TestaConta {
         double valor;
 
         switch (opcao) {
+            case 0:
+                System.out.println("Até mais!");
+                break;
             case 1:
                 System.out.println("Qual o valor do depósito? ");  
                   
