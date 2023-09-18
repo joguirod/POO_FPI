@@ -1,4 +1,5 @@
-package classes.Saudacao;
+package Exercicio04.classes.Saudacao;
+
 public class Saudacao {
     String texto;
     String destinatario;

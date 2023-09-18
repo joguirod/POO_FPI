@@ -1,4 +1,4 @@
-package classes.Equipamento;
+package Exercicio04.classes.Equipamento;
 
 public class Equipamento {
     boolean ligado;

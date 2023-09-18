@@ -1,10 +1,16 @@
-package classes.Conta;
+package Exercicio04.classes.Conta;
 
 public class Conta {
     public String numero;
+    public String titular;
     private double saldo;
 
     public Conta(String numero, double saldo){
+        this.numero = numero;
+        this.saldo = saldo;
+    }
+
+    public Conta(String numero, String titular, double saldo){
         this.numero = numero;
         this.saldo = saldo;
     }

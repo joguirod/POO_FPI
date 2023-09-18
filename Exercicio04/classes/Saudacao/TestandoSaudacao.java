@@ -1,4 +1,5 @@
-package classes.Saudacao;
+package Exercicio04.classes.Saudacao;
+
 public class TestandoSaudacao {
     public static void main(String[] args) {
         Saudacao saudaocao1 = new Saudacao("Bom dia, ", "João");

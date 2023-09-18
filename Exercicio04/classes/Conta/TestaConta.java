@@ -1,4 +1,4 @@
-package classes.Conta;
+package Exercicio04.classes.Conta;
 import java.util.Scanner;
 
 public class TestaConta {

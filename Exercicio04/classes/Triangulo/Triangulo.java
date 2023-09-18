@@ -1,4 +1,5 @@
-package classes.Triangulo;
+package Exercicio04.classes.Triangulo;
+
 
 public class Triangulo {
     int lado1;

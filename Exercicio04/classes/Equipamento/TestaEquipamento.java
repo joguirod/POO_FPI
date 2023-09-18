@@ -1,4 +1,4 @@
-package classes.Equipamento;
+package Exercicio04.classes.Equipamento;
 
 public class TestaEquipamento {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package classes.Jogador;
+package Exercicio04.classes.Jogador;
 
 public class Jogador {
     int forca;

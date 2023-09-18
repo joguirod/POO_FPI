@@ -1,4 +1,4 @@
-package classes.Triangulo;
+package Exercicio04.classes.Triangulo;
 
 public class TestandoTriangulo {
     public static void main(String[] args) {
