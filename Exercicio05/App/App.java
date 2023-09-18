@@ -1,7 +1,6 @@
 package Exercicio05.App;
 import Exercicio05.App.Banco.Banco;
 import java.util.Scanner;
-
 import Exercicio04.classes.Conta.Conta;
 
 public class App {
@@ -49,7 +48,7 @@ public class App {
                     break;
                 case 7:
                     System.out.println("\nTotalizações\n");
-                    app.totalizacoes(banco);
+                    System.out.println(app.totalizacoes(banco));
                 default:
                     if (opcao != 0) {
                         System.out.println("Opção Inválida!");
@@ -113,7 +112,7 @@ public class App {
 
     public void excluir(Banco banco){
         System.out.println("Qual o número da conta a ser excluída?");
-        String numero = scanner.nextLine();
+        String numero = scanner.next();
 
         banco.excluir(numero);
     }
