@@ -58,11 +58,10 @@ public class Banco {
     }
 
     public void sacar(String numero, double valor){
-        int indiceProcurado = consultarPorIndice(numero);
+        Conta contaProcurada = consultar(numero);
 
-        if(indiceProcurado != -1){
-            Conta conta = contas.get(indiceProcurado);
-            conta.sacar(valor);
+        if(contaProcurada != null){
+           contaProcurada.sacar(valor);
         }
     }
 
