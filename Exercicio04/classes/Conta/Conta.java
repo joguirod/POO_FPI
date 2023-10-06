@@ -1,8 +1,8 @@
 package Exercicio04.classes.Conta;
 
 public class Conta {
-    public String numero;
-    public String titular;
+    private String numero;
+    private String titular;
     private double saldo;
 
     public Conta(String numero, double saldo){
@@ -12,7 +12,21 @@ public class Conta {
 
     public Conta(String numero, String titular, double saldo){
         this.numero = numero;
+        this.titular = titular;
         this.saldo = saldo;
+    }
+
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public String getTitular() {
+        return titular;
+    }
+
+    public double getSaldo() {
+        return saldo;
     }
 
     public boolean sacar(double valor){
@@ -41,4 +55,6 @@ public class Conta {
         ContaDestino.depositar(valor);
         return true;
     }
+
+
 }

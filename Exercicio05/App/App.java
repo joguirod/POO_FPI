@@ -10,7 +10,7 @@ public class App {
         App app = new App();
         Banco banco = new Banco();
         
-        int opcao = 0;
+        int opcao;
         
         System.out.println("Bem vindo!");
         do {
@@ -81,7 +81,7 @@ public class App {
         String titular = scanner.next();
         Conta conta = new Conta(numero, titular, 0);
 
-        banco.contas.add(conta);   
+        banco.inserir(conta);
     }
 
     public void consultar(Banco banco){

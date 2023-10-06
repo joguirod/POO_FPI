@@ -4,21 +4,24 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class Banco {
-    public List<Conta> contas = new ArrayList<Conta>();
+    private List<Conta> contas = new ArrayList<Conta>();
+
+    public List<Conta> getContas() {
+        return contas;
+    }
 
     public void inserir(Conta conta){
-        if (consultar(conta.numero) == null){
+        if (consultar(conta.getNumero()) == null){
             contas.add(conta);
-
         }
-             
+
     }
 
     public Conta consultar(String numero){
         Conta contaProcurada = null;
 
         for (int i = 0; i < contas.size(); i++){
-            if (contas.get(i).numero.equals(numero)) {
+            if (contas.get(i).getNumero().equals(numero)) {
                 contaProcurada = contas.get(i);
                 break;
             }
@@ -26,11 +29,11 @@ public class Banco {
         return contaProcurada;
     }
 
-    public int consultarPorIndice(String numero){
+    private int consultarPorIndice(String numero){
         int indiceProcurado = -1;
 
         for(int i = 0; i < contas.size(); i++){
-            if (contas.get(i).numero == numero){
+            if (contas.get(i).getNumero().equals(numero)){
                 indiceProcurado = i;
                 break;
             }
@@ -39,7 +42,7 @@ public class Banco {
     }
 
     public void alterar(Conta conta){
-        int indiceProcurado = consultarPorIndice(conta.numero);
+        int indiceProcurado = consultarPorIndice(conta.getNumero());
 
         if (indiceProcurado != -1){
             contas.set(indiceProcurado, conta);
