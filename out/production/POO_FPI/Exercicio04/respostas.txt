@@ -1,0 +1,35 @@
+1. (F)
+   (V)
+   (F)
+   (V)
+   (V)
+   (V)
+   (V)
+
+2. É afirmavél que haverá um problema de compilação, visto que TypeScript exige que as variavéis sejam inicializadas.
+
+3. class Hotel {
+    quantReservas: number = 0;
+    
+    constructor(quantReservas: number) {
+        this.quantReservas = quantReservas;
+    }
+
+    adicionarReservas() : void {
+        quantReservas++;
+    }
+}
+
+4. Ocorreriam dois erros de compilação, o atributo volume não foi inicializado e na instanciação da classe Radio, não foi
+ passado o parâmetro do construtor idealizado (volune). A solução seria inicializar o atributo volume e passar como argumento
+ o número 10 para o construtor.
+   
+
+5. Os prints imprimirão todos 190. Isso acontecerá porque c1 e c3 estarão todos apontando para o objeto c2, 
+então quando c1.sacar(10) for realizado,  será sacado 10 reais de c2. como os objetos estão apontando pra c2,
+todos "terão" 190 de saldo.
+
+
+6, 7, 8, 9, 10. Códigos na pasta ./classes
+
+11. Acredito que a melhor seria a que retorna erro ou acerto.

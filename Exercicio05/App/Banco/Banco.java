@@ -1,5 +1,7 @@
 package Exercicio05.App.Banco;
 import Exercicio04.classes.Conta.Conta;
+import Exercicio07.questao04.Poupanca;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -85,4 +87,12 @@ public class Banco {
     public double mediaDepositado(){
         return totalDepositado() / qtdContas();
     }
+
+    public void renderJuros(String numero){
+        Conta contaDesejada = consultar(numero);
+        if(contaDesejada != null && contaDesejada instanceof Poupanca){
+            ((Poupanca)contaDesejada).renderJuros();
+        }
+    }
 }
+

@@ -1,59 +1,58 @@
 package Exercicio04.classes.Conta;
 
 public class Conta {
-    private String numero;
-    private String titular;
-    private double saldo;
+    private String _numero;
+    private String _titular;
+    private double _saldo;
 
     public Conta(String numero, double saldo){
-        this.numero = numero;
-        this.saldo = saldo;
+        _numero = numero;
+        _saldo = saldo;
     }
 
     public Conta(String numero, String titular, double saldo){
-        this.numero = numero;
-        this.titular = titular;
-        this.saldo = saldo;
-    }
-
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public String getTitular() {
-        return titular;
-    }
-
-    public double getSaldo() {
-        return saldo;
+        _numero = numero;
+        _titular = titular;
+        _saldo = saldo;
     }
 
     public boolean sacar(double valor){
-        if (saldo < 0 || saldo - valor < 0){
+        if (_saldo < 0 || _saldo - valor < 0){
             return false;
         }
         
-        saldo -= valor;
+        _saldo -= valor;
         return true;
     }
 
     public void depositar(double valor){
-        saldo += valor;
+        _saldo += valor;
     }
 
     public double consultarSaldo(){
-        return this.saldo;
+        return this._saldo;
     }
 
     public boolean transferir(Conta ContaDestino, double valor){
-        if (saldo < 0 || saldo - valor < 0){
+        if (_saldo < 0 || _saldo - valor < 0){
             return false;
         }
 
         this.sacar(valor);
         ContaDestino.depositar(valor);
         return true;
+    }
+
+    public String getNumero() {
+        return _numero;
+    }
+
+    public String getTitular() {
+        return _titular;
+    }
+
+    public double getSaldo() {
+        return _saldo;
     }
 
 

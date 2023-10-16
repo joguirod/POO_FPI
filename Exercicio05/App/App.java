@@ -49,6 +49,7 @@ public class App {
                 case 7:
                     System.out.println("\nTotalizações\n");
                     System.out.println(app.totalizacoes(banco));
+                    break;
                 default:
                     if (opcao != 0) {
                         System.out.println("Opção Inválida!");
