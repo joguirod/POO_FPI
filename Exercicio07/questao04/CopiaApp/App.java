@@ -195,7 +195,7 @@ public class App {
         String linha = bufferedReader.readLine();
 
         while (linha != null) {
-            String[] partes = linha.split(";");
+            String[] partes = linha.split("; ");
             String numero = partes[0];
             double saldo = Double.parseDouble(partes[1]);
             String tipo = partes[2];
