@@ -16,7 +16,7 @@ public class App {
         app.lerContas(banco);
 
         int opcao;
-        
+
         System.out.println("Bem vindo!");
         do {
             System.out.println("\nOpções disponíveis:");
@@ -67,7 +67,7 @@ public class App {
             }
 
             app.meuContinue(app);
-            
+
         } while (opcao != 0);
         app.salvarContas(banco);
 
@@ -76,14 +76,14 @@ public class App {
 
     public String opcoes(){
         return "1 - Cadastrar"
-        + "\n2 - Consultar"
-        + "\n3 - Sacar"
-        + "\n4 - Depositar"
-        + "\n5 - Excluir"
-        + "\n6 - Transferir"
-        + "\n7 - Totalizações"
-        + "\n8 - Render Juros"
-        + "\n0 - Sair";
+                + "\n2 - Consultar"
+                + "\n3 - Sacar"
+                + "\n4 - Depositar"
+                + "\n5 - Excluir"
+                + "\n6 - Transferir"
+                + "\n7 - Totalizações"
+                + "\n8 - Render Juros"
+                + "\n0 - Sair";
     }
 
     public void cadastrar(Banco banco){
@@ -123,7 +123,7 @@ public class App {
         double valor = scanner.nextDouble();
 
         banco.sacar(numero, valor);
-        
+
     }
 
     public void depositar(Banco banco){
@@ -158,8 +158,8 @@ public class App {
 
     public String totalizacoes(Banco banco){
         return "Quantidade de contas: " + banco.qtdContas()
-        + "\nTotal depositado: " + banco.totalDepositado()
-        + "\nMédia de valor depositado: " + banco.mediaDepositado();
+                + "\nTotal depositado: " + banco.totalDepositado()
+                + "\nMédia de valor depositado: " + banco.mediaDepositado();
     }
 
     public void renderJuros(Banco banco){
