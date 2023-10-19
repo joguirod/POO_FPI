@@ -8,11 +8,13 @@ import java.util.List;
 import java.util.ArrayList;
 public class Payroll {
     List<Person> persons = new ArrayList<Person>();
-
     public Payroll(List<Person> persons){
         this.persons = persons;
     }
 
+    public void addPerson(Person person){
+        persons.add(person); // Bem simples, sem verificação, apenas para demonstração
+    }
     public double calculateTotalPayments(){
         double total = 0;
         for(Person person : persons){

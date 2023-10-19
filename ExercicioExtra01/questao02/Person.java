@@ -9,14 +9,14 @@ public class Person {
         this._lastName = lastName;
     }
 
-    public String nomeCompleto(){
+    public String fullName(){
         return _name + " " + _lastName;
     }
-    public String get_name() {
+    public String getName() {
         return _name;
     }
 
-    public String get_lastName() {
+    public String getLastName() {
         return _lastName;
     }
 }

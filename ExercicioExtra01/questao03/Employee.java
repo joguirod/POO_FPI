@@ -8,6 +8,8 @@ public class Employee extends Person {
 
     public Employee(String name, String lastName, String registration, double salary) {
         super(name, lastName);
+        _registration = registration;
+        _salary = salary;
     }
 
     public double calculateFirstSalaryQuota(){
@@ -24,5 +26,12 @@ public class Employee extends Person {
 
     public double getSalary() {
         return _salary;
+    }
+
+    @Override
+    public String toString() {
+        return super.fullName() + ", First quota: U$"
+                + calculateFirstSalaryQuota() + ", Second Quota: U$"
+                + calculateSecondSalaryQuota();
     }
 }

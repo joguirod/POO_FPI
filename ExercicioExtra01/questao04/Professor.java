@@ -10,6 +10,9 @@ public class Professor extends Employee {
         this._title = _title;
     }
 
+    public String getTitle() {
+        return _title;
+    }
 
     @Override
     public double calculateFirstSalaryQuota(){
@@ -19,5 +22,12 @@ public class Professor extends Employee {
     @Override
     public double calculateSecondSalaryQuota(){
         return 0;
+    }
+
+    @Override
+    public String toString() {
+        return super.fullName() + ", "
+                + getTitle() + ", "
+                + calculateFirstSalaryQuota();
     }
 }

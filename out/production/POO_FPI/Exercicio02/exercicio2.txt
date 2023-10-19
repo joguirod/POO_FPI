@@ -1,0 +1,32 @@
+1. Quando a tipagem de uma linguagem é dinâmica, os tipos de variavéis são verificadas em tempo de execução, a linguagem consegue identificar o tipo sem a necessidade do programador especificar.
+   já quando a tipagem é estática, a verificação do tipo é em tempo de compilação, faz-se necessário especificar o tipo e não poderá altera-lo depois.
+
+2. A tipagem dinâmica deixa o código mais propenso a erros em tempo de execução.
+
+3. Em javascript há um exemplo muito conhecido que é a soma de um number com uma string: const a = 2, const b = "3", a + b vai gerar 5. Em python, não é possível concatenar um número em uma string, print("o resultado é: " + 2) 
+
+4. C permite que um dado seja acessado como se fosse outro. Por exemplo, um float pode ser acessado como um inteiro.
+
+5. O tipo any é benéfico quando os tipos dos dados de entrada são desconhecidos ou mal definidos, um exemplo é quando o programa está consumindo dados de uma API externa e não se sabe bem o tipo dos dados retornados.
+ 
+6. Não, o typescript permite esse caso devido a type inference, mas mesmo assim a conversão automática de tipos não é permitida, tornando a tipagem forte. 
+
+7.
+ const nome: string = "Ely;
+ const paymentTime: number = 120.56;
+ const linguagem:string = "TypeScript";
+
+ const saida: string = `${nome}\nMy payment time is ${paymentTime}\nand\nmy preferred language is ${linguagem}`;
+ console.log(saida);
+
+8. b) function somador(number: numero1, number: numero2){
+	return numero1 + numero2;
+	
+	console.log(`A Soma é: ${numero1 + numero2}`) // Passa a ser exibido
+
+   c) const numero1 = 2;
+      const numero2 = 3;
+      console.log(numero1 + numero2); // ! Com essa noImplicitAny definido como true, isso nao será mais possível 
+
+   e) let nome: string;
+      console.log(nome); // a saída passa a ser undefined 
