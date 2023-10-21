@@ -19,7 +19,6 @@ public class PayrollApp {
     static Payroll payroll = new Payroll(persons);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         int choosenOption;
         do {
@@ -33,9 +32,11 @@ public class PayrollApp {
                     break;
                 case 2:
                     System.out.println("Total payments: U$" + payroll.calculateTotalPayments());
+                    myContinue();
                     break;
                 case 3:
                     showEmployeeSalary();
+                    myContinue();
                     break;
                 case 0:
                     System.out.println("Good bye :)");
@@ -45,7 +46,6 @@ public class PayrollApp {
                     break;
             }
 
-            myContinue();
         } while(choosenOption != 0);
         scanner.close();
     }
@@ -103,6 +103,7 @@ public class PayrollApp {
 
     public static void myContinue(){
         System.out.print("Press <anykey> to continue...");
+        scanner.nextLine();
         scanner.nextLine();
     }
 }
