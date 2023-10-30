@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f33fa45-6a97-44dc-92b2-469392d7ad7c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExercicioExtra01/questao02/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExercicioExtra01/questao02/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExercicioExtra01/questao03/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExercicioExtra01/questao03/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExercicioExtra01/questao04/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExercicioExtra01/questao04/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExercicioExtra01/questao05/Payroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExercicioExtra01/questao05/Payroll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExercicioExtra01/questao06/PayrollApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/ExercicioExtra01/questao06/PayrollApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO_FPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/ExercicioExtra01/questao06/PayrollApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO_FPI/ExercicioExtra01/questao06/PayrollApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
