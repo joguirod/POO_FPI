@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f33fa45-6a97-44dc-92b2-469392d7ad7c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Avaliacao01/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avaliacao01/Entidades/Perfil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avaliacao01/Entidades/Postagem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avaliacao01/Entidades/PostagemAvancada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avaliacao01/RedeSocial.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avaliacao01/Repositorios/RepositorioDePerfis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Avaliacao01/Repositorios/RepositorioDePostagens.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO_FPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/ExercicioExtra01/questao06/PayrollApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/POO_FPI/ExercicioExtra01/questao06/PayrollApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/Avaliacao01/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/Avaliacao01/Entidades/Perfil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/Avaliacao01/Entidades/Postagem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/Avaliacao01/Entidades/PostagemAvancada.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/Avaliacao01/RedeSocial.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/Avaliacao01/Repositorios/RepositorioDePerfis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/POO_FPI/Avaliacao01/Repositorios/RepositorioDePostagens.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +48,72 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;20&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/José Guilherme/Documents/POO_FPI/AtividadeAvaliativa01&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/José Guilherme/Documents/POO_FPI/AtividadeAvaliativa01/src/Main.java&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\José Guilherme\Documents\POO_FPI\AtividadeAvaliativa01" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="AtividadeAvaliativa01.questao06" />
+      <recent name="AtividadeAvaliativa01.questao05" />
+      <recent name="AtividadeAvaliativa01.questao04" />
+      <recent name="AtividadeAvaliativa01.questao03" />
+      <recent name="AtividadeAvaliativa01" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestaConta">
+    <configuration name="AtividadeAvaliativa01.questao04.TestaConta" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AtividadeAvaliativa01.questao04.TestaConta" />
+      <module name="POO_FPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AtividadeAvaliativa01.questao04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestaBanco" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AtividadeAvaliativa01.questao05.TestaBanco" />
+      <module name="POO_FPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AtividadeAvaliativa01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestaConta" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AtividadeAvaliativa01.questao03.TestaConta" />
+      <module name="POO_FPI" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AtividadeAvaliativa01.questao03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestaConta" />
+        <item itemvalue="Application.TestaBanco" />
+        <item itemvalue="Application.AtividadeAvaliativa01.questao04.TestaConta" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -48,5 +124,16 @@
       <updated>1697666735235</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/AtividadeAvaliativa01/src/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
