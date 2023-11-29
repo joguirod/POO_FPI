@@ -1,0 +1,1 @@
+Criação das classes ApliacaoError, ContaInexistenteError e SaldoInsuficienteError.

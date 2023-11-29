@@ -1,66 +1,60 @@
 package AtividadeAvaliativa01;
 
-import Exercicio04.classes.Conta.Conta;
-import Exercicio07.questao04.ContaImposto;
-import Exercicio07.questao04.CopiaApp.Banco.Banco;
-import Exercicio07.questao04.Poupanca;
-
 import java.io.*;
 import java.util.Scanner;
 
 public class App {
-    Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
+    static Banco banco = new Banco();
 
     public static void main(String[] args) throws IOException {
-        Banco banco = new Banco();
-        App app = new App();
-        app.lerContas(banco);
+        lerContas();
 
         int opcao;
 
         System.out.println("Bem vindo!");
         do {
             System.out.println("\nOpções disponíveis:");
-            System.out.println("\n" + app.opcoes());
+            System.out.println("\n" + opcoes());
             System.out.print("Digite uma opção: ");
-            opcao = app.scanner.nextInt();
-            app.meuCtrlL();
+            opcao = scanner.nextInt();
+            meuCtrlL();
 
             // 14ª questão - Adição do tratamento de exceções como no slide Aplicação Robusta:
             try{
                 switch(opcao) {
                     case 1:
                         System.out.println("\nCadastrar Conta\n");
-                        app.cadastrar(banco);
+                        cadastrar();
                         System.out.println("Conta cadastrada com sucesso!");
                         break;
                     case 2:
                         System.out.println("\nConsultar conta\n");
-                        app.consultar(banco);
+                        consultar();
                         break;
                     case 3:
                         System.out.println("\nSacar\n");
-                        app.sacar(banco);
+                        sacar();
                         break;
                     case 4:
                         System.out.println("\nDepositar\n");
-                        app.depositar(banco);
+                        depositar();
                         break;
                     case 5:
                         System.out.println("\nExcluir conta\n");
-                        app.excluir(banco);
+                        excluir();
                         break;
                     case 6:
                         System.out.println("\nTransferir\n");
-                        app.transferir(banco);
+                        transferir();
                         break;
                     case 7:
                         System.out.println("\nTotalizações\n");
-                        System.out.println(app.totalizacoes(banco));
+                        System.out.println(totalizacoes());
                         break;
                     case 8:
                         System.out.println("\nRender Juros\n");
-                        app.renderJuros(banco);
+                        renderJuros();
                         break;
                     default:
                         if (opcao != 0) {
@@ -69,26 +63,30 @@ public class App {
                         break;
                 }
 
-                app.meuContinue(app);
+                meuContinue();
 
             } catch (Exception e){
                 if(e instanceof AplicacaoError){
                     System.out.println(e.getMessage());
                 }
-                if(e instanceof RuntimeException){
+                else if(e instanceof InputError){
+                    System.out.println(e.getMessage());
+                }
+                else if(e instanceof RuntimeException){
                     System.out.println("Erro no sistema. Contate o administrador.");
                 }
             } finally {
                 System.out.println("Operação finalizada. Digite 0 para sair.");
+                meuContinue();
             }
 
         } while (opcao != 0);
-        app.salvarContas(banco);
+        salvarContas();
 
         System.out.println("Tchau bb!");
     }
 
-    public String opcoes(){
+    public static String opcoes(){
         return "1 - Cadastrar"
                 + "\n2 - Consultar"
                 + "\n3 - Sacar"
@@ -100,21 +98,16 @@ public class App {
                 + "\n0 - Sair";
     }
 
-    public void cadastrar(Banco banco){
-        System.out.println("Qual o tipo da conta? (C/CP/CI)");
-        String tipoConta = scanner.next();
-        System.out.println("Número da conta: ");
-        String numero = scanner.next();
-        System.out.println("Titular da conta: ");
-        String titular = scanner.next();
+    public static void cadastrar(){
+        String tipoConta = obterEntradaString("Qual o tipo da conta? (C/CP/CI)");
+        String numero = obterNumeroConta("Número da conta: ");
+        String titular = obterEntradaString("Titular da conta: ");
         if(tipoConta.equals("CP")){
-            System.out.println("Taxa de juros da conta: ");
-            double taxaJuros = scanner.nextDouble();
+            double taxaJuros = obterNumero("Taxa de juros da conta (em %): ");
             Poupanca poupanca = new Poupanca(numero, titular, 0, taxaJuros);
             banco.inserir(poupanca);
         } else if (tipoConta.equals("CI")) {
-            System.out.println("Taxa de desconto da conta: ");
-            double taxaDesconto = scanner.nextDouble();
+            double taxaDesconto = obterNumero("Taxa de desconto da conta: ");
             ContaImposto contaImposto = new ContaImposto(numero, titular, 0, taxaDesconto);
             banco.inserir(contaImposto);
         } else {
@@ -123,46 +116,38 @@ public class App {
         }
     }
 
-    public void consultar(Banco banco){
-        System.out.println("Digite o número da conta a ser consultada: ");
-        String numero = scanner.next();
+    public static void consultar(){
+
+        String numero = obterNumeroConta("Digite o número da conta a ser consultada: ");
         double saldo = banco.consultar(numero).consultarSaldo();
         System.out.printf("Saldo da conta %s: %.2f%n", numero, saldo);
     }
 
-    public void sacar(Banco banco){
-        System.out.println("Digite o número da conta para saque: ");
-        String numero = scanner.next();
-        System.out.println("Qual o valor a ser sacado? ");
-        double valor = scanner.nextDouble();
+    public static void sacar(){
+        String numero = obterNumeroConta("Digite o número da conta para saque: ");
+        double valor = obterNumero("Qual o valor a ser sacado? ");
 
         banco.sacar(numero, valor);
 
     }
 
-    public void depositar(Banco banco){
-        System.out.println("Digite o número da conta para depósito: ");
-        String numero = scanner.next();
-        System.out.println("Qual o valor a ser depositado? ");
-        double valor = scanner.nextDouble();
+    public static void depositar(){
+        String numero = obterNumeroConta("Digite o número da conta para depósito: ");
+        double valor = obterNumero("Qual o valor a ser depositado? ");
 
         banco.consultar(numero).depositar(valor);
     }
 
-    public void excluir(Banco banco){
-        System.out.println("Qual o número da conta a ser excluída?");
-        String numero = scanner.next();
+    public static void excluir(){
+        String numero = obterNumeroConta("Qual o número da conta a ser excluída? ");
 
         banco.excluir(numero);
     }
 
-    public void transferir(Banco banco){
-        System.out.println("Digite o número da conta de origem: ");
-        String numeroOrigem = scanner.next();
-        System.out.println("Digite o número da conta de destino: ");
-        String numeroDestino = scanner.next();
-        System.out.println("Qual o valor a ser transferido?\n> ");
-        double valor = scanner.nextDouble();
+    public static void transferir(){
+        String numeroOrigem = obterNumeroConta("Digite o número da conta de origem: ");
+        String numeroDestino = obterNumeroConta("Digite o número da conta de destino: ");
+        double valor = obterNumero("Qual o valor a ser transferido?\n> ");
 
         Conta contaOrigem = banco.consultar(numeroOrigem);
         Conta contaDestino = banco.consultar(numeroDestino);
@@ -170,20 +155,19 @@ public class App {
         contaOrigem.transferir(contaDestino, valor);
     }
 
-    public String totalizacoes(Banco banco){
+    public static String totalizacoes(){
         return "Quantidade de contas: " + banco.qtdContas()
                 + "\nTotal depositado: " + banco.totalDepositado()
                 + "\nMédia de valor depositado: " + banco.mediaDepositado();
     }
 
-    public void renderJuros(Banco banco){
-        System.out.println("Qual o número da conta?");
-        String numero = scanner.next();
+    public static void renderJuros(){
+        String numero = obterNumeroConta("Qual o número da conta?");
         banco.renderJuros(numero);
     }
 
-    public void salvarContas(Banco banco) throws IOException {
-        File file = new File("C:\\Users\\José Guilherme\\Documents\\POO_FPI\\Exercicio07\\questao04\\CopiaApp\\contas.txt");
+    public static void salvarContas() throws IOException {
+        File file = new File("C:\\Users\\José Guilherme\\Documents\\POO_FPI\\AtividadeAvaliativa01\\contas.txt");
         FileWriter fileWriter = new FileWriter(file);
 
         for (Conta conta : banco.getContas()) {
@@ -201,8 +185,8 @@ public class App {
         fileWriter.close();
     }
 
-    public void lerContas(Banco banco) throws IOException {
-        File file = new File("C:\\Users\\José Guilherme\\Documents\\POO_FPI\\Exercicio07\\questao04\\CopiaApp\\contas.txt");
+    public static void lerContas() throws IOException {
+        File file = new File("C:\\Users\\José Guilherme\\Documents\\POO_FPI\\AtividadeAvaliativa01\\contas.txt");
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
@@ -231,13 +215,79 @@ public class App {
         fileReader.close();
     }
 
-    public void meuCtrlL(){
+    public static void meuCtrlL(){
         System.out.println("\n".repeat(20));
     }
 
-    public void meuContinue(App app){
+
+    // 15 questão: adicionando exceção na entrada de dados.
+    public static String obterEntradaString (String label) throws StringInvalidaError, InputVazioError{
+        System.out.println(label);
+        String entrada = scanner.nextLine().trim();
+
+        if(entrada.equals(" ")){
+            throw new InputVazioError("Input vazio não é permitido.");
+        } else if(!contemApenasLetras(entrada)){
+            throw new StringInvalidaError("O input deve conter apenas letras.");
+        }
+
+        return entrada;
+    }
+
+    // 15 questão: adicionando exceção na entrada de dados.
+    public static String obterNumeroConta(String label){
+        System.out.println(label);
+        String entrada = scanner.nextLine().trim();
+
+        if(!contemApenasNumeros(entrada)){
+            throw new NumeroContaInvalidoError("O número da conta não pode ter letras.");
+        }
+
+        return entrada;
+    }
+
+    // 15 questão: adicionando exceção na entrada de dados.
+    public static Double obterNumero(String label){
+        System.out.println(label);
+        String entrada = scanner.nextLine().trim();
+        for(int i = 0; i < entrada.length(); i++){
+            char caractere = entrada.charAt(i);
+            if(!Character.isDigit(caractere)){
+                if(caractere != '.'){
+                    throw new NumeroInvalidoError("O número informado é inválido.");
+                }
+                else if (!Character.isDigit(entrada.charAt(i+1))){
+                    throw new NumeroInvalidoError("O número informado é inválido.");
+                }
+            }
+        }
+        return Double.parseDouble(entrada);
+    }
+
+    public static boolean contemApenasLetras(String entrada){
+        boolean apenasLetras = true;
+        for(int i = 0; i < entrada.length(); i++){
+            if(!Character.isLetter(entrada.charAt(i))){
+                apenasLetras = false;
+            }
+        }
+        return apenasLetras;
+    }
+
+    public static boolean contemApenasNumeros(String entrada){
+        boolean apenasNumeros = true;
+        for(int i = 0; i < entrada.length(); i++){
+            char caractere = entrada.charAt(i);
+            if(Character.isLetter(caractere)){
+                apenasNumeros = false;
+            }
+        }
+        return apenasNumeros;
+    }
+
+    public static void meuContinue(){
         System.out.print("Pressione Enter para continuar...");
-        app.scanner.nextLine();
-        app.scanner.nextLine();
+        scanner.nextLine();
+        scanner.nextLine();
     }
 }
